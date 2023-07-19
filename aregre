@@ -5,10 +5,10 @@ url = "https://jsonplaceholder.typicode.com/todos"
 a = requests.get(url)
 a.raise_for_status()
 
-print(a)
+print(a.text)
 
-with open('HTTP.json', 'w') as file:
+with open('index1.json', 'w') as file:
     file.write(a.text)
 
-URL = 'HTTP.json'
+url = 'index1.json'
 webbrowser.open_new_tab(url)
